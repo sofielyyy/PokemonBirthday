@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Press Start 2P', monospace;
+}
+
+body{
+
+    background:#6cbf66;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100vh;
+}
+
+#game{
+
+    position:relative;
+}
+
+#world {
+
+    width:960px;
+    height:640px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background-image:url("images/grass.png");
+
+    background-size:64px 64px;
+
+    border:8px solid black;
+}
+
+#ending {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 570px;
+  
+    background-color: #f7f1e3; 
+    border: 4px solid #403d39; 
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 100; 
+}
+
+#ending h1 {
+    margin-top: 0;
+    color: #2b2b2b;
+    font-size: 1.6rem;
+}
+
+#ending p {
+    color: #4a4a4a;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 15px 0 25px;
+}
+
+#ending button {
+    background-color: #ff6b6b;
+    color: #ffffff;
+    border: 2px solid #333333;
+    padding: 10px 22px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+#ending button:hover {
+    background-color: #ee5253;
+    transform: scale(1.05);
+}
+
+#player{
+
+    position:absolute;
+
+    width:48px;
+
+    image-rendering:pixelated;
+
+    left:450px;
+
+    top:300px;
+
+    z-index:10;
+}
+
+.pokemon{
+
+    position:absolute;
+
+    width:48px;
+
+    image-rendering:pixelated;
+
+    z-index:5;
+
+    transition:.2s;
+
+    animation:bounce 1.5s infinite;
+}
+
+#dialogue{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    bottom:20px;
+
+    width:800px;
+
+    background:white;
+
+    border:5px solid black;
+
+    padding:25px;
+
+    display:none;
+
+    border-radius:12px;
+
+    z-index:50;
+
+    line-height: 1.8;
+}
+
+#close {
+    margin-top: 20px;
+    padding: 10px 16px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    cursor: pointer;
+    background: #e0e0e0;
+    border: 3px solid black;
+    border-radius: 4px;
+}
+
+#close:hover {
+    background: #cccccc;
+}
+
+#friendship{
+
+    margin-bottom:15px;
+
+    color:white;
+
+    font-size:22px;
+}
+
+#bar{
+
+    width:300px;
+
+    height:20px;
+
+    background:#ddd;
+
+    margin-top:10px;
+}
+
+#fill{
+
+    height:100%;
+
+    width:0%;
+
+    background:#df5757;
+
+    transition:.4s;
+}
+
+#interaction{
+
+    position:absolute;
+
+    display:none;
+
+    font-size:40px;
+
+    font-weight:bold;
+
+    color:white;
+
+    text-shadow:3px 3px black;
+
+    z-index:50;
+
+    font-family: Arial, sans-serif;
+}
+
+@keyframes bounce{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-5px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+}
+
+.object{
+
+    position:absolute;
+
+    image-rendering:pixelated;
+
+    z-index: 20;
+}
+
+.object[src*="tree"]{
+
+    width:128px;
+
+    height:128px;
+}
+
+.object[src*="flower"]{
+
+    width:48px;
+
+    height:48px;
+}

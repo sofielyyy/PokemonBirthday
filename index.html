@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <audio id="music" loop>
+        <source src="music/theme.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="victory-music">
+        <source src="music/victory.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="game">
+
+        <div id="friendship">
+
+            <span>Friendship</span>
+
+            <div id="bar">
+
+                <div id="fill"></div>
+
+            </div>
+
+        </div>
+
+        <div id="world">
+
+            <div id="map"></div>
+
+            <div id="objects"></div>
+
+            <div id="pokemonLayer"></div>
+
+            <div id="interaction">!</div>
+
+            <img
+                id="player"
+                src="images/player.png"
+                alt="Player">
+
+        </div>
+
+        <div id="dialogue">
+
+            <h2 id="pokemonName"></h2>
+
+            <div id="typing"></div>
+
+            <button id="close">
+                Continue
+            </button>
+
+        </div>
+
+        <div id="ending">
+
+            <h1>🎉 Happy Birthday! 🎉</h1>
+
+            <p>
+                You found every Pokémon!
+                <br><br>
+                Thank you for playing this little adventure ❤️
+            </p>
+
+            <button onclick="location.reload()">
+                Play Again
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
